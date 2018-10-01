@@ -1,0 +1,19 @@
+{
+   "type": "object",
+   "properties":{
+   "uri": {
+    "type": "string"
+   },
+   "name": {
+    "type": "string"
+   },
+   "HQ": {
+   "type": "string"
+   }
+  },
+  "required":[
+   "uri",
+   "name",
+   "HQ"
+  ]
+}

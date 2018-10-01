@@ -1,0 +1,102 @@
+[
+     {
+       "uri": "/sensor/turbine1_poweroutput",
+       "name": "turbine1_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine1_windspeed",
+       "name": "turbine1_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine2_poweroutput",
+       "name": "turbine2_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine2_windspeed",
+       "name": "turbine2_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine3_poweroutput",
+       "name": "turbine3_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine3_windspeed",
+       "name": "turbine3_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine4_poweroutput",
+       "name": "turbine4_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine4_windspeed",
+       "name": "turbine4_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine5_poweroutput",
+       "name": "turbine5_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine5_windspeed",
+       "name": "turbine5_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine6_poweroutput",
+       "name": "turbine6_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine6_windspeed",
+       "name": "turbine6_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine7_poweroutput",
+       "name": "turbine7_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine7_windspeed",
+       "name": "turbine7_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine8_poweroutput",
+       "name": "turbine8_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine8_windspeed",
+       "name": "turbine8_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine9_poweroutput",
+       "name": "turbine9_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine9_windspeed",
+       "name": "turbine9_windspeed",
+       "createdTimestamp": "1465929466743"
+     },
+    {
+       "uri": "/sensor/turbine10_poweroutput",
+       "name": "turbine10_poweroutput",
+       "createdTimestamp": "1465929466743"
+     },
+     {
+       "uri": "/sensor/turbine10_windspeed",
+       "name": "turbine10_windspeed",
+       "createdTimestamp": "1465929466743"
+     }
+]

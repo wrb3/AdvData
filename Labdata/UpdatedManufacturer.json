@@ -1,0 +1,14 @@
+[
+ {
+   "uri": "/manufacturer/GE",
+   "name": "GE",
+   "HQ": "San Ramon",
+   "createdTimestamp": "1465929466743"
+ },
+ {
+   "uri": "/manufacturer/Siemens",
+   "name": "Siemens",
+   "HQ": "Munich",
+   "createdTimestamp": "1465929466743"
+ }
+]

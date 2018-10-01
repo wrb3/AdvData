@@ -1,0 +1,878 @@
+{
+	"variables": [],
+	"info": {
+		"name": "AdvanceAssetPost",
+		"_postman_id": "010ad704-6fc6-1bfb-67d4-82916f225adb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Asset Audit",
+			"description": "",
+			"item": [
+				{
+					"name": "QueryAssetAuditHistory",
+					"request": {
+						"url": "https://{{asset_uri}}/system/configs",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n\t{\n\t\t\"enableAudit\":true\n\t}]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update_your_wind_turbine_Asset",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine/023",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n      {\r\n        \"uri\":    \"/wind_turbine/023\",\r\n        \"name\":   \"richey\",\r\n        \"serial\": \"lmore_023\",\r\n        \"classification\": \"/classifications/wind_turbine\",\r\n        \"sector\": \"/sector/up-2\"\r\n      }\r\n      \r\n    ]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Audit_History",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/system/audit",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Update Audit",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/system/audit/changes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Update Audit",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/system/audit/changes",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET Audit_History_with_filter",
+					"request": {
+						"url": "https://{{asset_uri}}/system/audit?filter=reason=training",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							},
+							{
+								"key": "x-audit-metadata",
+								"value": "{\"userid\":\"richey\",\"reason\":\"training\"}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"uri\": \"/wind_turbine/023\",\n    \"name\": \"richey\",\n    \"serial\": \"lmore_023\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"sector\": \"/sector/up-2\"\n  }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "gelQuery",
+			"description": "",
+			"item": [
+				{
+					"name": "fieldsClause",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine?fields=uri,model,classification",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\t\"uri\": \"asset/wind_turbine\",\r\n\t\"name\": \"GE_wind_turbine\"\r\n\t},\r\n\t{\r\n\t\"uri\": \"asset/nacelle\",\r\n\t\"name\": \"Nacelle\",\r\n\t\"parent\": \"asset/wind_turbine\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/low_speed_shaft\",\r\n\t\"name\": \"low_speed_shaft\",\r\n\t\"parent\": \"asset/nacelle\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/gear_box\",\r\n\t\"name\": \"gear_box\",\r\n\t\"parent\": \"asset/low_speed_shaft\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/generator\",\r\n\t\"name\": \"generator\",\r\n\t\"parent\": \"asset/gear_box\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/controller\",\r\n\t\"name\": \"controller\",\r\n\t\"parent\": \"asset/generator\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"asset/controller\"\r\n\t},\r\n\t{\"uri\": \"asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"asset/controller\"\r\n\t}\r\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "filterQuery",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine?filter=builtBy=/manufacturer/GE",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "filterANDQuery",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine?filter=builtBy=/manufacturer/GE:serial=WT17001",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "forward-relate query ",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/fleet?filter=name=Livermore_023>fleet",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\t\"uri\": \"/asset/wind_turbine\",\r\n\t\"name\": \"GE_wind_turbine\"\r\n\t},\r\n\t{\r\n\t\"uri\": \"/asset/nacelle\",\r\n\t\"name\": \"Nacelle\",\r\n\t\"parent\": \"/asset/wind_turbine\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/low_speed_shaft\",\r\n\t\"name\": \"low_speed_shaft\",\r\n\t\"parent\": \"/asset/nacelle\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/gear_box\",\r\n\t\"name\": \"gear_box\",\r\n\t\"parent\": \"/asset/low_speed_shaft\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/generator\",\r\n\t\"name\": \"generator\",\r\n\t\"parent\": \"/asset/gear_box\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/controller\",\r\n\t\"name\": \"controller\",\r\n\t\"parent\": \"/asset/generator\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"/asset/controller\"\r\n\t},\r\n\t\t{\"uri\": \"/asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"/asset/controller\"\r\n\t}\r\n\t]\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Backward-relate query ",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine?filter=(name=Union Pacific Fleet 1)<fleet",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n  {\n    \"uri\": \"/wind_turbine/022\",\n    \"name\": \"Livermore_022\",\n    \"serial\": \"lmore_022\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"fleet\": \"fleets/up-1\",\n    \"attributes\": {\n      \"padMount\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"1\"\n      },\n      \"builtBy\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"GE\"\n      },\n      \"model\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"ABC\"\n      },\n      \"height\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"100\"\n      },\n      \"uom\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"m\"\n      },\n      \"region\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"US-WEST\"\n      },\n      \"blades\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"3\"\n      },\n      \"color\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"gray\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/023\",\n    \"name\": \"Livermore_023\",\n    \"serial\": \"lmore_023\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"attributes\": {\n      \"padMount\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"1\"\n      },\n      \"builtBy\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"GE\"\n      },\n      \"model\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"ABC\"\n      },\n      \"height\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"100\"\n      },\n      \"uom\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"m\"\n      },\n      \"region\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"US-WEST\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine1\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17001\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.5sl\",\n    \"numRotorBlades\": 3,\n    \"fleet\": \"fleets/up-1\",\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 20,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 14,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1500,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 37.7457,\n      \"long\": -121.658\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine1_poweroutput\",\n        \"tag\": \"turbine1_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine1_windspeed\",\n        \"tag\": \"turbine1_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine10\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17010\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"2.75-120\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 139,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 28,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 15,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1850,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 41.479,\n      \"long\": -101.923\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine10_poweroutput\",\n        \"tag\": \"turbine10_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine10_windspeed\",\n        \"tag\": \"turbine10_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    },\n    \"attributes\": {\n      \"padMount\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"1\"\n      },\n      \"builtBy\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"GE\"\n      },\n      \"model\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"ABC\"\n      },\n      \"height\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"100\"\n      },\n      \"uom\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"m\"\n      },\n      \"region\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"US-WEST\"\n      },\n      \"blades\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"3\"\n      },\n      \"color\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"gray\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine2\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17002\",\n    \"builtBy\": \"/manufacturer/Siemens\",\n    \"model\": \"SWT-2.3-108\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 25,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 11.5,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 2300,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 39.5578,\n      \"long\": -119.99\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine2_poweroutput\",\n        \"tag\": \"turbine2_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine2_windspeed\",\n        \"tag\": \"turbine2_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine3\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17003\",\n    \"builtBy\": \"/manufacturer/Siemens\",\n    \"model\": \"SWT-3.6-130\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 25,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 12,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 3600,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 46.6578,\n      \"long\": -112.287\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine3_poweroutput\",\n        \"tag\": \"turbine3_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine3_windspeed\",\n        \"tag\": \"turbine3_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine4\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17004\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.5s\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 4,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 25,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 13,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1500,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 32.5962,\n      \"long\": -88.923\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine4_poweroutput\",\n        \"tag\": \"turbine4_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine4_windspeed\",\n        \"tag\": \"turbine4_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine5\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17005\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.5se\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 4,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 25,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 13,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1500,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 45.1966,\n      \"long\": -71.259\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine5_poweroutput\",\n        \"tag\": \"turbine5_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine5_windspeed\",\n        \"tag\": \"turbine5_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine6\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17006\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.5sle\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 25,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 14,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1500,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 38.5614,\n      \"long\": -121.582\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine6_poweroutput\",\n        \"tag\": \"turbine6_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine6_windspeed\",\n        \"tag\": \"turbine6_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    },\n    \"attributes\": {\n      \"padMount\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"1\"\n      },\n      \"builtBy\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"GE\"\n      },\n      \"model\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"ABC\"\n      },\n      \"height\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"100\"\n      },\n      \"uom\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"m\"\n      },\n      \"region\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"US-WEST\"\n      },\n      \"blades\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"3\"\n      },\n      \"color\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"gray\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine7\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17007\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.5xle\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 100,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 20,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 12.5,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1500,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 33.605,\n      \"long\": -112.405\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine7_poweroutput\",\n        \"tag\": \"turbine7_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine7_windspeed\",\n        \"tag\": \"turbine7_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine8\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17008\",\n    \"classification\": \"/classifications/wind_turbine\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.7-103\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 80,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 24,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 13,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1700,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 44.2072,\n      \"long\": -101.368\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine8_poweroutput\",\n        \"tag\": \"turbine8_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine8_windspeed\",\n        \"tag\": \"turbine8_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    },\n    \"attributes\": {\n      \"padMount\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"1\"\n      },\n      \"builtBy\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"GE\"\n      },\n      \"model\": {\n        \"allowOverride\": \"false\",\n        \"type\": \"string\",\n        \"value\": \"ABC\"\n      },\n      \"height\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"100\"\n      },\n      \"uom\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"m\"\n      },\n      \"blades\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"integer\",\n        \"value\": \"3\"\n      },\n      \"color\": {\n        \"allowOverride\": \"true\",\n        \"type\": \"string\",\n        \"value\": \"gray\"\n      }\n    }\n  },\n  {\n    \"uri\": \"/wind_turbine/turbine9\",\n    \"createdTimestamp\": \"1465929466743\",\n    \"serial\": \"WT17009\",\n    \"builtBy\": \"/manufacturer/GE\",\n    \"model\": \"1.85-82.5\",\n    \"numRotorBlades\": 3,\n    \"height\": {\n      \"value\": 65,\n      \"unit\": \"m\"\n    },\n    \"cutInSpeed\": {\n      \"value\": 3.5,\n      \"unit\": \"m/s\"\n    },\n    \"cutOutSpeed\": {\n      \"value\": 22,\n      \"unit\": \"m/s\"\n    },\n    \"ratedSpeed\": {\n      \"value\": 12,\n      \"unit\": \"m/s\"\n    },\n    \"powerCapacity\": {\n      \"value\": 1850,\n      \"unit\": \"kW\"\n    },\n    \"location\": {\n      \"lat\": 38.2833,\n      \"long\": -94.679\n    },\n    \"sensors\": {\n      \"poweroutput\": {\n        \"uri\": \"/sensor/turbine9_poweroutput\",\n        \"tag\": \"turbine9_poweroutput\",\n        \"unit\": \"kW\"\n      },\n      \"windspeed\": {\n        \"uri\": \"/sensor/turbine9_windspeed\",\n        \"tag\": \"turbine9_windspeed\",\n        \"unit\": \"m/s\"\n      }\n    }\n  }\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "forward-relate Asset Query",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/asset?filter=(name=high_speed_shaft)>parent[t6]",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\t\"uri\": \"/asset/wind_turbine\",\r\n\t\"name\": \"GE_wind_turbine\"\r\n\t},\r\n\t{\r\n\t\"uri\": \"/asset/nacelle\",\r\n\t\"name\": \"Nacelle\",\r\n\t\"parent\": \"/asset/wind_turbine\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/low_speed_shaft\",\r\n\t\"name\": \"low_speed_shaft\",\r\n\t\"parent\": \"/asset/nacelle\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/gear_box\",\r\n\t\"name\": \"gear_box\",\r\n\t\"parent\": \"/asset/low_speed_shaft\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/generator\",\r\n\t\"name\": \"generator\",\r\n\t\"parent\": \"/asset/gear_box\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/controller\",\r\n\t\"name\": \"controller\",\r\n\t\"parent\": \"/asset/generator\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"/asset/controller\"\r\n\t}\r\n\t]\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Backword-relate Asset Query",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/asset?filter=(name=gear_box)<parent[t3]",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\t\"uri\": \"/asset/wind_turbine\",\r\n\t\"name\": \"GE_wind_turbine\"\r\n\t},\r\n\t{\r\n\t\"uri\": \"/asset/nacelle\",\r\n\t\"name\": \"Nacelle\",\r\n\t\"parent\": \"/asset/wind_turbine\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/low_speed_shaft\",\r\n\t\"name\": \"low_speed_shaft\",\r\n\t\"parent\": \"/asset/nacelle\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/gear_box\",\r\n\t\"name\": \"gear_box\",\r\n\t\"parent\": \"/asset/low_speed_shaft\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/generator\",\r\n\t\"name\": \"generator\",\r\n\t\"parent\": \"/asset/gear_box\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/controller\",\r\n\t\"name\": \"controller\",\r\n\t\"parent\": \"/asset/generator\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"/asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"/asset/controller\"\r\n\t}\r\n\t]\r\n"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "GET_asset",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/asset",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n{\r\n\t\"uri\": \"asset/wind_turbine\",\r\n\t\"name\": \"GE_wind_turbine\"\r\n\t},\r\n\t{\r\n\t\"uri\": \"asset/nacelle\",\r\n\t\"name\": \"Nacelle\",\r\n\t\"parent\": \"asset/wind_turbine\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/low_speed_shaft\",\r\n\t\"name\": \"low_speed_shaft\",\r\n\t\"parent\": \"asset/nacelle\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/gear_box\",\r\n\t\"name\": \"gear_box\",\r\n\t\"parent\": \"asset/low_speed_shaft\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/generator\",\r\n\t\"name\": \"generator\",\r\n\t\"parent\": \"asset/gear_box\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/controller\",\r\n\t\"name\": \"controller\",\r\n\t\"parent\": \"asset/generator\"\r\n\t},\r\n\t\t{\r\n\t\"uri\": \"asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"asset/controller\"\r\n\t},\r\n\t{\"uri\": \"asset/high_speed_shaft\",\r\n\t\"name\": \"high_speed_shaft\",\r\n\t\"parent\": \"asset/controller\"\r\n\t}\r\n]"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "timeseries",
+			"description": "",
+			"item": [
+				{
+					"name": "get tags",
+					"request": {
+						"url": "https://{{timeseries_uri}}/v1/tags",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{timeseries_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "get latest data point",
+					"request": {
+						"url": "https://{{timeseries_uri}}/v1/datapoints/latest",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{timeseries_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "aggregation",
+					"request": {
+						"url": "https://{{timeseries_uri}}/v1/datapoints",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{timeseries_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"tags\": [{\n\t\t\"name\": \"turbine1_poweroutput\",\n\t\t\"aggregations\": [{\n\t\t\t\"type\": \"avg\",\n\t\t\t\"sampling\": {\n\t\t\t\t\"unit\": \"s\",\n\t\t\t\t\"value\": \"30\"\n\t\t\t}\n\t\t}]\n\t}],\n\t\"start\": 0,\n\t\"end\": -1\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "get token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "",
+						"password": "",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "https://{{uaa_uri}}/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic Og==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "grant_type=client_credentials"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "upload a new schema",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/system/schema/entities/manufacturer",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add manufacture data",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/manufacturer",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get schema",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/system/schema/entities/manufacturer",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "wind_turbine classification",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/classifications/wind_turbine",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add wind_turbine asset",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/wind_turbine",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "update classification(propagate classification)",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/classifications/wind_turbine",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      {\r\n        \"uri\":        \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"Prince\"},\r\n          \"name\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"Prince\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "verify assets is updated",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/classifications/wind_turbine",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add fleet_ asset_data",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/fleet",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n     {\r\n       \"uri\": \"/sensor/turbine1_poweroutput\",\r\n       \"name\": \"turbine1_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine1_windspeed\",\r\n       \"name\": \"turbine1_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine2_poweroutput\",\r\n       \"name\": \"turbine2_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine2_windspeed\",\r\n       \"name\": \"turbine2_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine3_poweroutput\",\r\n       \"name\": \"turbine3_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine3_windspeed\",\r\n       \"name\": \"turbine3_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine4_poweroutput\",\r\n       \"name\": \"turbine4_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine4_windspeed\",\r\n       \"name\": \"turbine4_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine5_poweroutput\",\r\n       \"name\": \"turbine5_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine5_windspeed\",\r\n       \"name\": \"turbine5_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine6_poweroutput\",\r\n       \"name\": \"turbine6_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine6_windspeed\",\r\n       \"name\": \"turbine6_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine7_poweroutput\",\r\n       \"name\": \"turbine7_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine7_windspeed\",\r\n       \"name\": \"turbine7_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine8_poweroutput\",\r\n       \"name\": \"turbine8_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine8_windspeed\",\r\n       \"name\": \"turbine8_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine9_poweroutput\",\r\n       \"name\": \"turbine9_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine9_windspeed\",\r\n       \"name\": \"turbine9_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine10_poweroutput\",\r\n       \"name\": \"turbine10_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine10_windspeed\",\r\n       \"name\": \"turbine10_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     }\r\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add_fleet_ asset_data",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/fleet",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "add_ asset_data",
+			"request": {
+				"url": "https://{{asset_uri}}/v1/asset",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Predix-Zone-Id",
+						"value": "{{asset_zone_id}}",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

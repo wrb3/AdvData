@@ -1,0 +1,36 @@
+[
+{
+	"uri": "/asset/wind_turbine",
+	"name": "GE_wind_turbine"
+	},
+	{
+	"uri": "/asset/nacelle",
+	"name": "Nacelle",
+	"parent": "/asset/wind_turbine"
+	},
+		{
+	"uri": "/asset/low_speed_shaft",
+	"name": "low_speed_shaft",
+	"parent": "/asset/nacelle"
+	},
+		{
+	"uri": "/asset/gear_box",
+	"name": "gear_box",
+	"parent": "/asset/low_speed_shaft"
+	},
+		{
+	"uri": "/asset/generator",
+	"name": "generator",
+	"parent": "/asset/gear_box"
+	},
+		{
+	"uri": "/asset/controller",
+	"name": "controller",
+	"parent": "/asset/generator"
+	},
+		{
+	"uri": "/asset/high_speed_shaft",
+	"name": "high_speed_shaft",
+	"parent": "/asset/controller"
+	}
+	]

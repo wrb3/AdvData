@@ -1,0 +1,461 @@
+[
+  {
+    "uri": "/wind_turbine/022",
+    "name": "Livermore_022",
+    "serial": "lmore_022",
+    "classification": "/classifications/wind_turbine",
+    "fleet": "/fleet/up-1"
+  },
+  {
+    "uri": "/wind_turbine/023",
+    "name": "Livermore_023",
+    "serial": "lmore_023",
+    "classification": "/classifications/wind_turbine",
+    "fleet": "/fleet/up-2"
+  },
+  {
+    "uri": "/wind_turbine/turbine1",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17001",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.5sl",
+    "numRotorBlades": 3,
+    "fleet": "/fleet/up-3",
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 20,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 14,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1500,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 37.7457,
+      "long": -121.658
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine1_poweroutput",
+        "tag": "turbine1_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine1_windspeed",
+        "tag": "turbine1_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine10",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17010",
+    "classification": "/classifications/wind_turbine",
+    "builtBy": "/manufacturer/GE",
+    "model": "2.75-120",
+    "numRotorBlades": 3,
+    "fleet": "/fleet/up-1",
+    "height": {
+      "value": 139,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 28,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 15,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1850,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 41.479,
+      "long": -101.923
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine10_poweroutput",
+        "tag": "turbine10_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine10_windspeed",
+        "tag": "turbine10_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine2",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17002",
+    "builtBy": "/manufacturer/Siemens",
+    "model": "SWT-2.3-108",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 25,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 11.5,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 2300,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 39.5578,
+      "long": -119.99
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine2_poweroutput",
+        "tag": "turbine2_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine2_windspeed",
+        "tag": "turbine2_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine3",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17003",
+    "builtBy": "/manufacturer/Siemens",
+    "model": "SWT-3.6-130",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 25,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 12,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 3600,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 46.6578,
+      "long": -112.287
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine3_poweroutput",
+        "tag": "turbine3_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine3_windspeed",
+        "tag": "turbine3_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine4",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17004",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.5s",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 4,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 25,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 13,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1500,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 32.5962,
+      "long": -88.923
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine4_poweroutput",
+        "tag": "turbine4_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine4_windspeed",
+        "tag": "turbine4_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine5",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17005",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.5se",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 4,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 25,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 13,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1500,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 45.1966,
+      "long": -71.259
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine5_poweroutput",
+        "tag": "turbine5_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine5_windspeed",
+        "tag": "turbine5_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine6",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17006",
+    "classification": "/classifications/wind_turbine",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.5sle",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 25,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 14,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1500,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 38.5614,
+      "long": -121.582
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine6_poweroutput",
+        "tag": "turbine6_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine6_windspeed",
+        "tag": "turbine6_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine7",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17007",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.5xle",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 100,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 20,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 12.5,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1500,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 33.605,
+      "long": -112.405
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine7_poweroutput",
+        "tag": "turbine7_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine7_windspeed",
+        "tag": "turbine7_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine8",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17008",
+    "classification": "/classifications/wind_turbine",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.7-103",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 80,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 24,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 13,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1700,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 44.2072,
+      "long": -101.368
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine8_poweroutput",
+        "tag": "turbine8_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine8_windspeed",
+        "tag": "turbine8_windspeed",
+        "unit": "m/s"
+      }
+    }
+  },
+  {
+    "uri": "/wind_turbine/turbine9",
+    "createdTimestamp": "1465929466743",
+    "serial": "WT17009",
+    "builtBy": "/manufacturer/GE",
+    "model": "1.85-82.5",
+    "numRotorBlades": 3,
+    "height": {
+      "value": 65,
+      "unit": "m"
+    },
+    "cutInSpeed": {
+      "value": 3.5,
+      "unit": "m/s"
+    },
+    "cutOutSpeed": {
+      "value": 22,
+      "unit": "m/s"
+    },
+    "ratedSpeed": {
+      "value": 12,
+      "unit": "m/s"
+    },
+    "powerCapacity": {
+      "value": 1850,
+      "unit": "kW"
+    },
+    "location": {
+      "lat": 38.2833,
+      "long": -94.679
+    },
+    "sensors": {
+      "poweroutput": {
+        "uri": "/sensor/turbine9_poweroutput",
+        "tag": "turbine9_poweroutput",
+        "unit": "kW"
+      },
+      "windspeed": {
+        "uri": "/sensor/turbine9_windspeed",
+        "tag": "turbine9_windspeed",
+        "unit": "m/s"
+      }
+    }
+  }
+]
