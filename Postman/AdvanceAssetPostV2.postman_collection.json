@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "AdvanceAssetPost",
-		"_postman_id": "010ad704-6fc6-1bfb-67d4-82916f225adb",
+		"_postman_id": "c3253fea-d352-9de0-d3bf-2515c75242e8",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -132,36 +132,6 @@
 					"response": []
 				},
 				{
-					"name": "GET Update Audit",
-					"request": {
-						"url": "https://{{asset_uri}}/v1/system/audit/changes",
-						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "Bearer {{token}}",
-								"description": ""
-							},
-							{
-								"key": "Content-Type",
-								"value": "application/json",
-								"description": ""
-							},
-							{
-								"key": "Predix-Zone-Id",
-								"value": "{{asset_zone_id}}",
-								"description": ""
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
-						},
-						"description": ""
-					},
-					"response": []
-				},
-				{
 					"name": "GET Audit_History_with_filter",
 					"request": {
 						"url": "https://{{asset_uri}}/system/audit?filter=reason=training",
@@ -195,6 +165,36 @@
 						"description": ""
 					},
 					"response": []
+				},
+				{
+					"name": "GET assets individual",
+					"request": {
+						"url": "https://{{asset_uri}}/v1/wind_turbine/023",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "Predix-Zone-Id",
+								"value": "{{asset_zone_id}}",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
+						},
+						"description": ""
+					},
+					"response": []
 				}
 			]
 		},
@@ -205,7 +205,7 @@
 				{
 					"name": "fieldsClause",
 					"request": {
-						"url": "https://{{asset_uri}}/v1/wind_turbine?fields=uri,model,classification",
+						"url": "https://{{asset_uri}}/v1/wind_turbine?fields=uri,model,builtBy,serial",
 						"method": "GET",
 						"header": [
 							{
@@ -779,36 +779,6 @@
 				"body": {
 					"mode": "raw",
 					"raw": "[\r\n      {\r\n        \"uri\": \"/classifications/wind_turbine\",\r\n        \"status\":     \"enabled\",\r\n        \"attributes\": \r\n        {\"padMount\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"1\"},\r\n         \"builtBy\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"GE\"},\r\n          \"model\": {\"allowOverride\":\"false\", \"type\": \"string\", \"value\":\"ABC\"},\r\n         \"height\": {\"allowOverride\":\"true\", \"type\": \"integer\", \"value\":\"100\"},\r\n            \"uom\": {\"allowOverride\":\"true\", \"type\": \"string\", \"value\":\"m\"}\r\n          }\r\n      }\r\n      \r\n    ]"
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
-			"name": "add fleet_ asset_data",
-			"request": {
-				"url": "https://{{asset_uri}}/v1/fleet",
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Bearer {{token}}",
-						"description": ""
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					},
-					{
-						"key": "Predix-Zone-Id",
-						"value": "{{asset_zone_id}}",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n     {\r\n       \"uri\": \"/sensor/turbine1_poweroutput\",\r\n       \"name\": \"turbine1_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine1_windspeed\",\r\n       \"name\": \"turbine1_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine2_poweroutput\",\r\n       \"name\": \"turbine2_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine2_windspeed\",\r\n       \"name\": \"turbine2_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine3_poweroutput\",\r\n       \"name\": \"turbine3_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine3_windspeed\",\r\n       \"name\": \"turbine3_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine4_poweroutput\",\r\n       \"name\": \"turbine4_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine4_windspeed\",\r\n       \"name\": \"turbine4_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine5_poweroutput\",\r\n       \"name\": \"turbine5_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine5_windspeed\",\r\n       \"name\": \"turbine5_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine6_poweroutput\",\r\n       \"name\": \"turbine6_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine6_windspeed\",\r\n       \"name\": \"turbine6_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine7_poweroutput\",\r\n       \"name\": \"turbine7_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine7_windspeed\",\r\n       \"name\": \"turbine7_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine8_poweroutput\",\r\n       \"name\": \"turbine8_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine8_windspeed\",\r\n       \"name\": \"turbine8_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine9_poweroutput\",\r\n       \"name\": \"turbine9_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine9_windspeed\",\r\n       \"name\": \"turbine9_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n    {\r\n       \"uri\": \"/sensor/turbine10_poweroutput\",\r\n       \"name\": \"turbine10_poweroutput\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     },\r\n     {\r\n       \"uri\": \"/sensor/turbine10_windspeed\",\r\n       \"name\": \"turbine10_windspeed\",\r\n       \"createdTimestamp\": \"1465929466743\"\r\n     }\r\n]"
 				},
 				"description": ""
 			},
